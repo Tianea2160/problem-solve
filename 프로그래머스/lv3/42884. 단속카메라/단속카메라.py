@@ -5,7 +5,6 @@ def solution(routes):
     
     routes.sort(key=lambda x : x[1])
     
-    print(routes)
     for start, end in routes:
         # print(e, start)
         if e < start:
