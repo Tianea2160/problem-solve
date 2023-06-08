@@ -1,7 +1,22 @@
+import java.io.BufferedReader
+import java.io.BufferedWriter
+import java.io.InputStreamReader
+import java.io.OutputStreamWriter
+import java.util.StringTokenizer
+
 fun main() {
-    val (n, m) = readln().split(" ").map { it.toInt() }
-    val firstArray = readln().split(" ").map { it.toInt() }.toIntArray()
-    val secondArray = readln().split(" ").map { it.toInt() }.toIntArray()
+    val br = BufferedReader(InputStreamReader(System.`in`))
+    val bw = BufferedWriter(OutputStreamWriter(System.out))
+    var st = StringTokenizer(br.readLine())
+
+    val n = st.nextToken().toInt()
+    val m = st.nextToken().toInt()
+
+    st = StringTokenizer(br.readLine())
+    val firstArray = (0 until n).map { st.nextToken().toInt() }
+    st = StringTokenizer(br.readLine())
+    val secondArray = (0 until m).map { st.nextToken().toInt() }
+
     val result = mutableListOf<Int>()
     var (i, j) = 0 to 0
 
@@ -27,5 +42,7 @@ fun main() {
             i++
         }
     }
-    println(result.joinToString(" "))
+    bw.write(result.joinToString(" "))
+    bw.close()
+    br.close()
 }
