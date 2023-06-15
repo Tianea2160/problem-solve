@@ -1,11 +1,11 @@
 class Solution {
     fun solution(n: Long): IntArray {
-        var list = mutableListOf<Int>()
+        var nums = mutableListOf<Long>()
         var cur = n
         while(cur > 0){
-            list.add((cur%10).toInt())
-            cur /= 10
+            nums.add(cur % 10L)
+            cur /= 10L
         }
-        return list.toIntArray()
+        return nums.map{it.toInt()}.toIntArray()
     }
 }
