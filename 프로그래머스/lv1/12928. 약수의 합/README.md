@@ -1,10 +1,10 @@
 # [level 1] 약수의 합 - 12928 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12928) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/12928?language=kotlin) 
 
 ### 성능 요약
 
-메모리: 63.7 MB, 시간: 7.78 ms
+메모리: 61.5 MB, 시간: 0.05 ms
 
 ### 구분
 
