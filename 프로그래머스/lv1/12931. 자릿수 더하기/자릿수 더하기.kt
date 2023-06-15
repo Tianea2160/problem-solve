@@ -3,7 +3,7 @@ class Solution {
         var answer = 0
         var cur = n
         while(cur > 0){
-            answer += cur % 10
+            answer += cur%10
             cur /= 10
         }
         return answer
