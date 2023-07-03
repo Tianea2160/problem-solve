@@ -22,13 +22,8 @@ fun main() {
             continue
         }
         val cur = queue.poll()
-
-        if (cur.second <= time.first) {
-            queue.add(time)
-        } else {
-            queue.add(time)
-            queue.add(cur)
-        }
+        queue.add(time)
+        if (cur.second > time.first) queue.add(cur)
         answer = max(answer, queue.size)
     }
 
