@@ -1,0 +1,4 @@
+select ai.name as 'NAME', count(ai.name) as 'COUNT' from animal_ins as ai 
+group by ai.name
+having count(ai.name) > 1
+order by ai.name
