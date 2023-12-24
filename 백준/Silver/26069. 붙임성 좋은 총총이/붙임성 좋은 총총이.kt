@@ -4,22 +4,16 @@ fun main() {
     val map = mutableMapOf<String, Boolean>()
 
     fun shouldDance(a: String, b: String): Boolean {
+        if (a == "ChongChong" || b == "ChongChong") return true
         return (map[a] ?: false) || (map[b] ?: false)
     }
 
     for (i in 0 until t) {
         val (u, v) = br.readLine().split(' ')
+        val doDance = shouldDance(u, v)
 
-        if (u == "ChongChong" || v == "ChongChong") {
-            map[u] = true
-            map[v] = true
-            continue
-        }
-
-        if (shouldDance(u, v)) {
-            map[u] = true
-            map[v] = true
-        }
+        map[u] = doDance
+        map[v] = doDance
     }
 
     println(map.count { (name, doDance) -> doDance })
