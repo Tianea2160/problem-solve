@@ -4,7 +4,7 @@ import kotlin.math.max
 fun main() {
     val br = System.`in`.bufferedReader()
     val n = br.readLine().toInt()
-    val arr = LongArray(100_005) { 0L }
+    val arr = LongArray(n + 2) { 0L }
 
     for (i in 1..n) {
         arr[i] = br.readLine().toLong()
