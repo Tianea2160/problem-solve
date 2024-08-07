@@ -17,17 +17,14 @@ fun main() {
             answer = left to right
         }
 
-        if (sum > 0) {
-            right--
-        } else if (sum == 0L) {
-            break
-        } else {
-            left++
+        when {
+            sum < 0 -> left++
+            sum > 0 -> right--
+            else -> break
         }
     }
 
     bw.write("${nums[answer.first]} ${nums[answer.second]}")
-    bw.flush()
     bw.close()
     br.close()
 }
